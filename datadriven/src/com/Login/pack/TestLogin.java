@@ -36,15 +36,17 @@ public class TestLogin {
 
 		    System.out.println("PASS");
 		    
-		    driver.findElement(By.className("alert-message")).getText(); 
+		    driver.findElement(By.className("alert-message")).getText();
 		    
 		    Thread.sleep(2000);
+		
+	
 		    
 		    driver.findElement(By.xpath("//*[@id=\"notificationModal\"]/div/div/div[3]/button")).click();
 		    driver.findElement(By.xpath("//*[@id=\"content\"]/div/div[2]/div/div[2]/div/div[2]/div[1]/div/div/div[2]/div/div[1]/div/a")).click();
-		    
-	    Prealertcls pc = new Prealertcls(driver);
-        pc.TestPrealert(uname, password, password, password, password, uname, password, password, password, password, password, password, password, uname, password);
+		
+//	    Prealertcls pc = new Prealertcls(driver);
+//        pc.TestPrealert(uname, password, password, password, password, uname, password, password, password, password, password, password, password, uname, password);
           
 		} catch (Exception e) {
 
@@ -63,10 +65,10 @@ public class TestLogin {
 		
 		@DataProvider(name="Login")
 		public Object[][] passdata(){
-			ExceldataConfig config=new ExceldataConfig("C:\\Users\\Jyotheeswar\\eclipse-workspace\\Framework\\datadriven\\src\\Tata.xlsx");
+			ExceldataConfig config=new ExceldataConfig("C:\\Users\\Jyotheeswar\\git\\datadriven\\datadriven\\src\\Tata.xlsx");
 					int rows=config.getRowCount(0);
 					Object[][] data = new Object[rows][2];
-					for(int i=0;i<1;i++) {
+					for(int i=0;i<rows;i++) {
 						data[i][0]=config.getData(0, i, 0);
 						data[i][1]=config.getData(0, i, 1);
 					}

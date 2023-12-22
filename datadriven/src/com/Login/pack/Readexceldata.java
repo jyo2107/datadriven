@@ -13,13 +13,13 @@ public class Readexceldata {
 
 	public static void main(String[] args) throws IOException {
 		
-		File src = new File("C:\\Users\\Jyotheeswar\\eclipse-workspace\\Framework\\datadriven\\src\\Tata.xlsx");
+		File src = new File("C:\\Users\\Jyotheeswar\\git\\datadriven\\datadriven\\src\\Tata.xlsx");
 		FileInputStream fis = new FileInputStream(src);
 		XSSFWorkbook 	wb = new XSSFWorkbook(fis);
 		
 		XSSFSheet Sheet1=wb.getSheetAt(0);
 		
-        XSSFSheet Sheet2=wb.getSheetAt(1);
+    //    XSSFSheet Sheet2=wb.getSheetAt(1);
         
         String data0=Sheet1.getRow(0).getCell(0).getStringCellValue();
         System.out.println("Data from excel is  "+ data0);
@@ -34,14 +34,14 @@ public class Readexceldata {
         
         
         
-        String data01=Sheet2.getRow(0).getCell(0).getStringCellValue();
+        String data01=Sheet1.getRow(0).getCell(0).getStringCellValue();
         System.out.println("Data from excel is  "+ data01);
-        String data11=Sheet2.getRow(0).getCell(1).getStringCellValue();
+        String data11=Sheet1.getRow(0).getCell(1).getStringCellValue();
         System.out.println("Data from excel is "+ data11);
         
-        String data21=Sheet2.getRow(1).getCell(0).getStringCellValue();
+        String data21=Sheet1.getRow(1).getCell(0).getStringCellValue();
         System.out.println("Data from excel is  "+ data21);
-        String data31=Sheet2.getRow(1).getCell(1).getStringCellValue();
+        String data31=Sheet1.getRow(1).getCell(1).getStringCellValue();
         System.out.println("Data from excel is "+ data31);
         
         

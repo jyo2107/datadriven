@@ -1,21 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-11-24T17:27:13 IST" name="Default suite" finished-at="2023-11-24T17:27:31 IST" duration-ms="17888">
+  <suite started-at="2023-12-22T11:44:11 IST" name="Default suite" finished-at="2023-12-22T11:44:11 IST" duration-ms="53">
     <groups>
     </groups>
-    <test started-at="2023-11-24T17:27:13 IST" name="Default test" finished-at="2023-11-24T17:27:31 IST" duration-ms="17888">
-      <class name="com.Login.pack.Baseclsss">
-        <test-method is-config="true" signature="LaunchBrowser()[pri:0, instance:com.Login.pack.Baseclsss@34123d65]" started-at="2023-11-24T17:27:13 IST" name="LaunchBrowser" finished-at="2023-11-24T17:27:30 IST" duration-ms="17691" status="PASS">
+    <test started-at="2023-12-22T11:44:11 IST" name="Default test" finished-at="2023-12-22T11:44:11 IST" duration-ms="53">
+      <class name="com.Login.pack.TestLogin">
+        <test-method signature="Login(java.lang.String,java.lang.String)[pri:0, instance:com.Login.pack.TestLogin@5e0e82ae]" started-at="2023-12-22T11:44:11 IST" name="Login" data-provider="Login" finished-at="2023-12-22T11:44:11 IST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.apache.poi.xssf.usermodel.XSSFWorkbook.getSheetAt(int)" because "this.wb" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: java.lang.NullPointerException: Cannot invoke "org.apache.poi.xssf.usermodel.XSSFWorkbook.getSheetAt(int)" because "this.wb" is null
+at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:50)
+at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:146)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:798)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:740)
+at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59)
+at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:791)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.NullPointerException: Cannot invoke "org.apache.poi.xssf.usermodel.XSSFWorkbook.getSheetAt(int)" because "this.wb" is null
+at com.Login.pack.ExceldataConfig.getRowCount(ExceldataConfig.java:36)
+at com.Login.pack.TestLogin.passdata(TestLogin.java:67)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:77)
+at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:46)
+... 25 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LaunchBrowser -->
-        <test-method is-config="true" signature="Teardown()[pri:0, instance:com.Login.pack.Baseclsss@34123d65]" started-at="2023-11-24T17:27:31 IST" name="Teardown" finished-at="2023-11-24T17:27:31 IST" duration-ms="181" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Teardown -->
-      </class> <!-- com.Login.pack.Baseclsss -->
+        </test-method> <!-- Login -->
+      </class> <!-- com.Login.pack.TestLogin -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
