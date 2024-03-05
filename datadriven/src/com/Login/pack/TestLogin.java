@@ -15,10 +15,8 @@ public class TestLogin {
 	WebDriver driver;
 	 
 	
-	
 	@Test(dataProvider="Login")
 	public void Login(String uname, String password ) {
-		//System.setProperty("webdriver.chrome.driver", "D://ChromeDriver//chromedriver_win32//chromedriver.exe");
 		
 		ChromeOptions co = new ChromeOptions();
 		co.addArguments("--remote-allow-origins=*");
@@ -31,6 +29,7 @@ public class TestLogin {
 		driver.findElement(By.name("passwordTxt")).sendKeys(password);
 		driver.findElement(By.xpath("//*[@id=\"registerFormOne\"]/div/div[1]/div/div/div[2]/div[4]/button")).click();
 		
+		
 		try {
 		    assertEquals(driver.findElement(By.className("alert-message")).getText(), "You have successfully logged in");
 
@@ -41,12 +40,10 @@ public class TestLogin {
 		    Thread.sleep(2000);
 		
 	
-		    
-		    driver.findElement(By.xpath("//*[@id=\"notificationModal\"]/div/div/div[3]/button")).click();
-		    driver.findElement(By.xpath("//*[@id=\"content\"]/div/div[2]/div/div[2]/div/div[2]/div[1]/div/div/div[2]/div/div[1]/div/a")).click();
+//		    
+//		    driver.findElement(By.xpath("//*[@id=\"notificationModal\"]/div/div/div[3]/button")).click();
+//		    driver.findElement(By.xpath("//*[@id=\"content\"]/div/div[2]/div/div[2]/div/div[2]/div[1]/div/div/div[2]/div/div[1]/div/a")).click();
 		
-//	    Prealertcls pc = new Prealertcls(driver);
-//        pc.TestPrealert(uname, password, password, password, password, uname, password, password, password, password, password, password, password, uname, password);
           
 		} catch (Exception e) {
 

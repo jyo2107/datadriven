@@ -6,7 +6,7 @@
       <class name="com.Login.pack.TestLogin">
         <methods>
           <include name="teardown"/>
-          <include name="Login"/>
+          <include name="Login" invocation-numbers="0 1 2 3"/>
         </methods>
       </class> <!-- com.Login.pack.TestLogin -->
     </classes>
